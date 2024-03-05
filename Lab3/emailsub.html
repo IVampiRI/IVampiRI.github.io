@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 задание</title>
+    <link rel="stylesheet" href="CSS/emailsub.css">
+</head>
+<body>
+<div id="overlay">
+    <button class="close" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
+    <div class="popup">
+        <div class="vvodmail">
+            <p>Подписка на новостную рассылку</p>
+            <p>
+                <input class="email" type="email" id="email" style="display:none">
+            </p> 
+            <p>  
+                <button id="subscribeinp">Подписаться</button>
+                <button id="subscribe" style="display:none">Подписаться</button>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="res" id="resultMessage" style="display:none"></div>
+
+<script type="text/javascript" src="JS/emailsub.js">
+</script>
+</body>
+</html>

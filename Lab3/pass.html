@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="CSS/pass.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка сложности пароля</title>
+</head>
+<body>
+    <div class="card">
+        <h1>Проверка сложности пароля</h1>
+        <p>Введите свой пароль</p>
+        <input type="password" id="password" oninput="showPassword()">
+        <button onclick="checkPassword()">Проверить</button>
+        <p id="result"></p> 
+        <p id="visiblePassword"></p>
+    </div>
+    <script type="text/javascript" src="JS/pass.js">
+    </script>
+</body>
+</html>

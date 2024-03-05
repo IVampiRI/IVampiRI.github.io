@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="CSS/Calculator.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div id="output" class="output">0</div>
+      <div class="grid-container">
+      <button onclick="clearOutput()" class="calc-button clear" style="grid-column: span 2;">
+        C
+      </button>
+      <button onclick="deleteChar()" class="calc-button operator">
+        ⌫
+      </button>
+      <button onclick="appendToOutput('/')" class="calc-button operator">
+        /
+      </button>
+      <button onclick="appendToOutput('7')" class="calc-button number">
+        7
+      </button>
+      <button onclick="appendToOutput('8')" class="calc-button number">
+        8
+      </button>
+      <button onclick="appendToOutput('9')" class="calc-button number">
+        9
+      </button>
+      <button onclick="appendToOutput('*')" class="calc-button operator">
+        *
+      </button>
+      <button onclick="appendToOutput('4')" class="calc-button number">
+          4
+      </button>
+      <button onclick="appendToOutput('5')" class="calc-button number">
+          5
+      </button>
+      <button onclick="appendToOutput('6')" class="calc-button number">
+          6
+      </button>
+      <button onclick="appendToOutput('-')" class="calc-button operator">
+          -
+      </button>
+      <button onclick="appendToOutput('1')" class="calc-button number">
+          1
+      </button>
+      <button onclick="appendToOutput('2')" class="calc-button number">
+          2
+      </button>
+      <button onclick="appendToOutput('3')" class="calc-button number">
+          3
+      </button>
+      <button onclick="appendToOutput('+')" class="calc-button operator">
+          +
+      </button>
+      <button onclick="appendToOutput('0')" class="calc-button number" style="grid-column: span 2;">
+          0
+      </button>
+      <button onclick="appendToOutput('.')" class="calc-button number">
+          .
+      </button>
+      <button onclick="calculateResult()" class="calc-button equals">
+          =
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+    let calculationCompleted = false;
+      
+    function clearOutput() {
+      document.getElementById('output').innerText = '0';
+    }
+
+    function deleteChar() {
+  let output = document.getElementById('output').innerText;
+  if (output.length > 1) {
+    document.getElementById('output').innerText = output.slice(0, -1);
+  } else {
+    document.getElementById('output').innerText = '0';
+  }
+}
+
+    function appendToOutput(value) {
+    let output = document.getElementById('output').innerText;
+    if (calculationCompleted) {
+      document.getElementById('output').innerText = value;
+      calculationCompleted = false; // Сброс флага после очистки
+    } else if (output === '0') {
+      document.getElementById('output').innerText = value; // Замена 0 на нажатую цифру
+    } else {
+      document.getElementById('output').innerText += value;
+    }
+  }
+  function calculateResult() {
+    let output = document.getElementById('output').innerText;
+    let result = eval(output);
+    document.getElementById('output').innerText = result;
+    calculationCompleted = true;
+  }
+</script>
+</body>
+</html>
