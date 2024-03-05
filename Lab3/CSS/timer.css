@@ -1,0 +1,41 @@
+#timer {
+    font-family: 'Arial', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin-top: 20px;
+}
+body{
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(255,222,255,1) 0%, rgba(235,246,255,1) 35%, rgba(200,241,255,1) 58%, rgba(243,253,255,1) 100%);   
+}
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4285f4;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #40a8ff; /* Цвет фона при наведении */
+}
+.card {
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 85%; /* Задаем конкретную ширину */
+    max-width: 600px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрируем относительно body */
+    height: 25%; /* Устанавливаем высоту контейнера равной высоте видимой области окна браузера */
+  }

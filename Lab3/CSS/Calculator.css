@@ -1,0 +1,92 @@
+body{
+  background: linear-gradient(90deg, rgba(255,222,255,1) 0%, rgba(235,246,255,1) 35%, rgba(200,241,255,1) 58%, rgba(243,253,255,1) 100%);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 85%; /* Задаем конкретную ширину */
+  max-width: 600px; /* Максимальная ширина */
+  margin: 0 auto; /* Центрируем относительно body */
+  height: 100vh; /* Устанавливаем высоту контейнера равной высоте видимой области окна браузера */
+  background-color: transparent;
+}
+.card {
+  background-color: #ffffff; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 32rem;
+  width: 100%;
+}
+
+.output {
+  text-align: right;
+  font-size: 2.5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  color: #222;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25rem;
+  padding: 1rem;
+  background-color: transparent;
+}
+.calc-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 0.375rem; /* Устанавливаем радиус скругления рамки */
+    font-size: 0.875rem; /* Размер шрифта */
+    font-weight: 500; /* Толщина шрифта */
+    transition-duration: 150ms; /* Продолжительность анимации перехода */
+    user-select: none; /* Запрет выделения */
+    outline: none; /* Убираем контур фокуса */
+  }
+  
+  /* Кнопки с классом .calc-button.disabled */
+  .calc-button.disabled {
+    pointer-events: none; /* Запрет событий указателя */
+    opacity: 0.5; /* Полупрозрачность */
+  }
+  
+  /* Кнопки с классом .calc-button:hover */
+  .calc-button.number:hover {
+    background-color: #40a8ff; /* Цвет фона при наведении */
+  }
+  .calc-button.equals:hover {
+    background-color: #40a8ff; /* Цвет фона при наведении */
+  }
+  .calc-button.operator:hover {
+    background-color: #40a8ff; /* Цвет фона при наведении */
+  }
+  .calc-button.clear:hover {
+    background-color: #40a8ff; /* Цвет фона при наведении */
+  }
+  /* Кнопки с классом .calc-button.operator */
+  .calc-button.operator {
+    background-color: #FCBF49; /* Цвет фона кнопок-операторов */
+    color: #fff; /* Цвет текста */
+  }
+  
+  /* Кнопки с классом .calc-button.number */
+  .calc-button.number {
+    background-color: #031926; /* Цвет фона кнопок-цифр */
+    color: #fff; /* Цвет текста */
+  }
+  
+  /* Кнопки с классом .calc-button.equals */
+  .calc-button.equals {
+    background-color: #20BF55; /* Цвет кнопки "=" */
+    color: #fff; /* Цвет текста */
+  }
+  .calc-button.clear {
+    background-color: #FF3C38; 
+    color: #fff; /* Цвет текста */
+  }

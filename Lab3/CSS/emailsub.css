@@ -1,0 +1,147 @@
+body{
+    background: linear-gradient(90deg, rgba(255,222,255,1) 0%, rgba(235,246,255,1) 35%, rgba(200,241,255,1) 58%, rgba(243,253,255,1) 100%);
+  }
+#overlay {
+    position: fixed;
+    right: 8px;
+    left: 8px;
+    bottom: 8px;
+    top: 8px;
+    flex-direction: column;
+    display: none;
+    background: transparent;
+    z-index: 999;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    overflow: auto;
+    min-height: auto;
+    min-width: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Центрируем относительно body */
+    height: 95vh; /* Устанавливаем высоту контейнера равной высоте видимой области окна браузера */
+    background-color: transparent;
+    }
+    
+.popup {
+    display: block;
+    padding: 15px 20px;
+    z-index: 1000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    background-color: transparent; 
+
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto; /* Центрируем относительно body */
+    }
+    .close {
+    position: relative;
+    right: -216px;
+    top: 37px;
+    align-content: center;
+    border: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgba(194, 194, 194, 0.9);
+    -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    outline: none;
+ 
+}
+.close:before {
+    color: #222;
+    content: "X";
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    /* text-shadow: 0 -1px rgba(0, 0, 0, 0.9); */
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+/* кнопка закрытия при наведении */
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+}
+.subscribe{
+    display: none;
+}
+h2{
+    text-align: center;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+body p{
+    text-align: center;
+    font-size: 100%; /* Размер шрифта */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #222;
+}
+.vvodmail p{
+    font-size: 100%; /* Размер шрифта */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #222;
+}
+input{
+    text-align: left;
+    font-size: 100%;
+    padding: 1rem;
+    background-color: #d4d4d4;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    color: #222;
+    width: 50%;
+}
+div.vvodmail {
+    padding: 15px 20px;
+    z-index: 1000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 40%;
+    margin: 0 auto; /* Центрируем относительно body */
+}
+p button{
+    display: inline-flex;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    white-space: nowrap;
+    width: 50%;
+    border-radius: 0.375rem; /* Устанавливаем радиус скругления рамки */
+    font-size: 100%; /* Размер шрифта */
+    font-weight: 300; /* Толщина шрифта */
+    transition-duration: 150ms; /* Продолжительность анимации перехода */
+    user-select: none; /* Запрет выделения */
+    outline: none; /* Убираем контур фокуса */
+    background-color: #FF3C38; 
+    color: #fff; /* Цвет текста */
+}
+.res{
+    text-align: center;
+    font-family:  Arial, Helvetica, sans-serif;
+}
